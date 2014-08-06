@@ -1,0 +1,29 @@
+# todo: delete vimrc that runs by default
+
+pact install tmux mercurial python3 clang
+
+mkdir -p ~/dev/tmp_install
+
+# install fasd
+cd ~/dev/tmp_install
+git clone https://github.com/clvv/fasd.git
+cd fasd
+make install
+eval "$(fasd --init auto)"
+
+# install the_silver_searcher
+pact install libpcre-devel liblzma-devel
+cd ~/dev/tmp_install
+git clone https://github.com/ggreer/the_silver_searcher.git
+cd the_silver_searcher
+./build.sh && make install﻿
+
+# make npm work with cygwin, assuming it's been installed before in C:\Program Files\nodejs
+dos2unix '/cygdrive/c/Program Files/nodejs/npm'
+
+rm -r ~/dev/tmp_install
+
+cd
+git clone https://github.com/philananin/dotfiles .dotfiles
+cd .dotfiles
+./install.sh
