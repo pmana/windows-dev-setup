@@ -27,3 +27,6 @@ cd
 git clone https://github.com/philananin/dotfiles .dotfiles
 cd .dotfiles
 ./install.sh
+
+ln -s `cygpath -u $USERPROFILE`/Dropbox ~/Dropbox
+ln -s `cygpath -u $USERPROFILE`/Google\ Drive ~/GDrive
