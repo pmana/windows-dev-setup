@@ -9,6 +9,7 @@ function Install-ChocolateyAndPackages() {
     choco install appfabric
     choco install virtualbox
     choco install rdcman
+    choco install linqpad
 }
 
 function Install-ScoopAndPackages() {
