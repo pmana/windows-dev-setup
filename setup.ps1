@@ -1,13 +1,14 @@
 function Install-ChocolateyAndPackages() {
     iex (new-object net.webclient).DownloadString('http://bit.ly/psChocInstall')
 
-    choco install Firefox GoogleChrome
+    choco install Firefox GoogleChrome Opera Safari
     choco install dropbox skype spotify
     choco install autohotkey everything launchy
     choco install notepadplusplus sumatrapdf.install
     choco install pgadmin3 mysql.workbench
     choco install appfabric
     choco install virtualbox
+    choco install rdcman
 }
 
 function Install-ScoopAndPackages() {
